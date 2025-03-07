@@ -5,6 +5,11 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, Sid
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { CopySlash } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { CircleDollarSign  } from 'lucide-react';
+import { Settings  } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -14,11 +19,29 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title:'Products',
-        url:'/products',
-        icon: LayoutGrid,
+        title: 'Inventory',
+        url: '/inventory',
+        icon: CopySlash,
     },
+    {
+        title: 'Products',
+        url: '/products',
+        icon: ShoppingCart,
+    },
+    {
+        title: 'Role Management',
+        url: '/role-management',
+        icon: Users,
+    },
+    {
+        title: 'Sale Reports',
+        url: '/sale-reports',
+        icon: CircleDollarSign,
+    },
+   
 ];
+
+
 
 const footerNavItems: NavItem[] = [
     {
