@@ -28,9 +28,15 @@ use App\Http\Controllers\RoleController;
 Route::get('/role-management', [RoleController::class, 'index'])
     ->name('role.management');
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Middleware\AdminMiddleware;
 
+Route::middleware(AdminMiddleware::class)->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+  
+});
 
-
+    
 
 
 require __DIR__.'/settings.php';
