@@ -15,7 +15,7 @@ class AdminMiddleware
         }
 
         if (Auth::user()->usertype !== 'admin') {
-            return redirect('/dashboard')->with('error', 'Access denied.');
+            return redirect('/admin/dashboard')->with('error', 'Access denied.');
         }
 
         return $next($request);
